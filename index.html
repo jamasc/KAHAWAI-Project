@@ -79,6 +79,12 @@
       <h2>Introduction</h2>
       <p>Monitoring streams and measuring water flow are important tasks for hydrologists and environmentalists, as the resulting data support water resource, quality, and risk management, infrastructural and agricultural applications, as well as a number of other ecological operations like long term environmental monitoring and hydrological modeling.</p>
       <p>Current methods usually deploy a physical stream gauge that will measure a physical quantity connected to the flow of water. For example, the measured water pressure can yield water level or river stage combined with atmospheric pressure data, and the measured flow velocity and cross sectional area yield water discharge. </p>
+
+      <figure>
+	<img src="images/traditional_gauge.JPG" alt="Traditional Stream Gauge">
+	<figcaption>Game camera pointed to a small stream with a traditional stream gauge.</figcaption>
+      </figure>
+
       <p>Such stream gauging devices show strong limitations regarding the installation process, resources, and coverage of streams. Installation of just one gauging device, which has to be physically submerged in the river, requires time and resources. On top of that, sites along water streams may be difficult or even dangerous to access. Natural changes of stream shapes pose more difficulties in selecting and maintaining specific sites. Another limitation of these traditional devices is their sparse distribution in streams, which leaves large gaps in stream monitoring. </p>
       <p>Recently, computer vision and multimodal AI have been gaining traction. A promising and inexpensive way to measure water flow in streams is to install a game camera pointed at the stream and collect images of the stream through time. Using computer vision models, physical quantities such as river stage and discharge can be extracted from images. </p>
       <p>This not only saves resources by installing a single camera instead of an expensive gauging system, but also makes the installation process easier and safer; the camera set-up is non-intrusive and can be realized from a safe distance (with visuals of the water), rather than having to enter the stream itself. Compared to traditional gauging devices which usually provide single parameter measurements such as water pressure or velocity, images have the potential to carry a much richer set of information. Beyond replicating conventional hydrological metrics - with the help of approaches such as this project - images can capture qualitative and quantitative characteristics about stream geomorphology, the surrounding environment, and wildlife presence, thereby supporting a wider range of research. </p>
@@ -87,13 +93,7 @@
       <p>Using a dataset of 95k images labeled with ancillary (list) data to develop and train a computer vision model capable of detecting water in images, classifying flow conditions (dry, pools, running, freshet), and ultimately predicting measure stage and discharge rate, with the aim of ensuring generalizability to unseen images and stream sites. The final model can be applied to improve the hydrologic data in Hawaii and useful for managers and stakeholders. </p>
       <h3>Hydrological Data Collection Objective: </h3>
       <p>Collecting images from gauged streams across Hawaii and labeling them with corresponding measurements from nearby gauging stations to build a high-quality annotated dataset of Hawaiian streams and support training and validation of the computer vision model. </p>
-      <p>The next sections will summarize related approaches of this idea in current literature, elaborate on the data acquiring pipeline including our own camera installations, and finally introduce my approach to the machine learning model with preliminary results. </p>
-
-      <!-- Example: single centered image -->
-      <figure>
-        <img src="images/stream_camera.jpg" alt="Stream camera example">
-        <figcaption>Example camera setup near a Hawaiian stream.</figcaption>
-      </figure>
+      <p>The next sections will summarize <a href="#related-work">related approaches</a> of this idea in current literature, elaborate on the <a href="#data">data</a> acquiring pipeline including our own camera installations, and finally introduce my <a href="#approach">approach</a> to the machine learning model with <a href="#results">preliminary results</a>. </p>
     </section>
 
     <section id="related-work">
@@ -115,7 +115,9 @@
           </thead>
           <tbody>
             <tr>
-              <td style="padding:8px; border:1px solid #ccc;">A novel flood/water extraction index (FWEI) for identifying water and flooded areas using sentinel-2 visible and near-infrared spectral bands</td>
+              <td style="padding:8px; border:1px solid #ccc;">
+                <a href="https://link.springer.com/article/10.1007/s00477-024-02660-z">A novel flood/water extraction index (FWEI) for identifying water and flooded areas using sentinel-2 visible and near-infrared spectral bands</a>
+	      </td>
               <td style="padding:8px; border:1px solid #ccc;">Extraction of surface water and flooded areas from satellite images.</td>
               <td style="padding:8px; border:1px solid #ccc;">Novel Flood/Water Extraction Index (FWEI) compares visible and NIR bands and uses a thresholding technique.</td>
               <td style="padding:8px; border:1px solid #ccc;">Case study in Iran.</td>
@@ -124,7 +126,9 @@
             </tr>
 
             <tr>
-              <td style="padding:8px; border:1px solid #ccc;">Calibrated river-level estimation from river cameras using convolutional neural networks</td>
+              <td style="padding:8px; border:1px solid #ccc;">
+		<a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/912B6F25D567B59C38C6D76185829F76/S2634460223000067a.pdf/calibrated-river-level-estimation-from-river-cameras-using-convolutional-neural-networks.pdf">Calibrated river-level estimation from river cameras using convolutional neural networks</a>
+	      </td>
               <td style="padding:8px; border:1px solid #ccc;">Calibrated river water level estimation and flood indexing without water segmentation or ground surveys.</td>
               <td style="padding:8px; border:1px solid #ccc;">Deep CNN (ResNet50) architecture:<br>• Regression WaterNet → water level index/score<br>• Classification WaterNet → binary flood index.</td>
               <td style="padding:8px; border:1px solid #ccc;">95 river sites across UK & Ireland (86 training, 5 validation, 4 test cameras).</td>
@@ -133,7 +137,9 @@
             </tr>
 
             <tr>
-              <td style="padding:8px; border:1px solid #ccc;">Monitoring Water Level Trend Using River Cameras: Integrating Domain-Specific Models and Segment Anything Model (SAM) for Transferable Water Segmentation</td>
+              <td style="padding:8px; border:1px solid #ccc;">
+		<a href="https://d197for5662m48.cloudfront.net/documents/publicationstatus/201913/preprint_pdf/e360c9bc8bec649f51871594be164981.pdf">Monitoring Water Level Trend Using River Cameras: Integrating Domain-Specific Models and Segment Anything Model (SAM) for Transferable Water Segmentation</a>
+	      </td>
               <td style="padding:8px; border:1px solid #ccc;">Transferable deep learning framework for water segmentation and monitoring water level from cameras.</td>
               <td style="padding:8px; border:1px solid #ccc;">ResUNet (ResNet50) generates point prompts; SAM segments water; Static Observer Flooding Index (SOFI) quantifies trends.</td>
               <td style="padding:8px; border:1px solid #ccc;">4 sites in the UK.</td>
@@ -142,7 +148,9 @@
             </tr>
 
             <tr>
-              <td style="padding:8px; border:1px solid #ccc;">Operationalizing Camera-Based Hydrologic Monitoring With AI and Edge Computing: Towards Real-Time Water Level and Discharge Measurements</td>
+              <td style="padding:8px; border:1px solid #ccc;">
+		<a href="https://digitalcommons.usu.edu/etd2023/561/">Operationalizing Camera-Based Hydrologic Monitoring With AI and Edge Computing: Towards Real-Time Water Level and Discharge Measurements</a>
+	      </td>
               <td style="padding:8px; border:1px solid #ccc;">Stage and flow monitoring using cameras, water segmentation, and discharge estimation via edge computing.</td>
               <td style="padding:8px; border:1px solid #ccc;">Segmentation (SegFormer, SAM, MobileSAM); regression on water pixels; discharge derived via pixel count and site-specific rating curves.</td>
               <td style="padding:8px; border:1px solid #ccc;">Tested on 2 river sites.</td>
@@ -151,7 +159,9 @@
             </tr>
 
             <tr>
-              <td style="padding:8px; border:1px solid #ccc;">In-Situ Sensing of Stream Flow using Deep Learning Sound Classification with Tagged Images</td>
+              <td style="padding:8px; border:1px solid #ccc;">
+		<a href="https://ui.adsabs.harvard.edu/abs/2022AGUFMNH43A..04K/abstract">In-Situ Sensing of Stream Flow using Deep Learning Sound Classification with Tagged Images</a>
+	      </td>
               <td style="padding:8px; border:1px solid #ccc;">Measuring relative streamflow changes using a multi-sensor AI approach (audio, humidity, temperature).</td>
               <td style="padding:8px; border:1px solid #ccc;">tinyML and edge AI for embedded environmental sensing.</td>
               <td style="padding:8px; border:1px solid #ccc;">Small and medium streams in Colorado.</td>
@@ -168,12 +178,24 @@
       <p>Hydrological monitoring using computer vision has been a growingfield of research in the past few years. As a result, there are many datasets available with images of rivers and streams, labeled with data like water segmentation masks or stream gauge data.</p>
       <h3>Jodi Kimmel Dataset </h3>
       <p>This dataset contains almost 95k images of water streams in Hawaii from 2019 to 2022. The images were taken with fixed game cameras in regular intervals of 15 minutes at four different locations. The dataset contains diurnal as well as nocturnal images. These images were hand labeled with a water rating: water running, dry bed, isolated pools, freshet, poor quality.</p>
+
+      <figure>
+	<img src="images/jodi_dataset.JPG">
+	<figcaption>Example image from the Kimmel dataset. This one is labeled as 'Water running'.</figcaption>
+      </figure>
+
       <h3>USGS HIVIS dataset </h3>
-      <p>The Hydrological Imagery Visualization and Information System (HIVIS) from the United States Geological Survey (USGS) \cite{USGS_HIVIS} provides open source data of stream gauging stations across the US connected to timelapse images of those streams. This enables building an image dataset for training labeled with precise hydrological data. Currently there is information available for 965 cameras, and USGS is deploying more cameras. Note, that on the Hawaiian islands there are USGS gauging stations, but no cameras. </p>
+      <p>The Hydrological Imagery Visualization and Information System (<a href="https://apps.usgs.gov/hivis/">HIVIS</a>) from the United States Geological Survey (<a href="https://waterwatch.usgs.gov/index.php?id=wwlmap_viewer2">USGS</a>) provides open source data of stream gauging stations across the US connected to timelapse images of those streams. This enables building an image dataset for training labeled with precise hydrological data. Currently there is information available for 965 cameras, and USGS is deploying more cameras. Note, that on the Hawaiian islands there are USGS gauging stations, but no cameras. </p>
+
+      <figure>
+	<img src="images/hivis_site.png">
+	<figcaption>Example of a HIVIS site; images and gauge measurements are available for 976 sites.</figcaption>
+      </figure>
+
       <h3>NEON Dataset </h3>
-      <p>The National Ecological Observation Network (NEON) collects and regularly publishes many data samples and images from different stations across the country. While not all of this data is hydrologically related, there is a good amount (TODO how many) of images available connected with sensor data. </p>
+      <p>The National Ecological Observation Network (<a href="https://data.neonscience.org/">NEON</a>) collects and regularly publishes many data samples and images from different stations across the country. While not all of this data is hydrologically related, there is a good amount (TODO how many) of images available connected with sensor data. </p>
       <h3>GRIME AI </h3>
-      <p>The GRIME AI project provides an open source tool for managing hydrological image data, and training models. It simplifies the process of working with multiple huge datasets, specifically there are options available to directly use the data from USGS and NEON, and upload more data. This provides for one location to handle and organize all collected and available data and even train a computer vision model on the data. </p>
+      <p>The <a href="https://gaugecam.org/grime-ai-details/">GRIME AI</a> project provides an open source tool for managing hydrological image data, and training models. It simplifies the process of working with multiple huge datasets, specifically there are options available to directly use the data from USGS and NEON, and upload more data. This provides for one location to handle and organize all collected and available data and even train a computer vision model on the data. </p>
     </section>
 
     <section id="approach">
@@ -181,7 +203,13 @@
       <p>This  project involves data collection and fieldwork, outreach and collaboration, as well as exploring and utilizing CV models for prediction of hydrological quantities. The project will be carried out in the following sequential phases: (1) Deploying monitoring cameras across water streams in Hawaii, possibly in collaboration with USGS and the Honolulu City Council. (2) Labeling images with data from stream gauges, for classification training the gauge data labels need to be converted to class labels. (3) Exploring and utilizing CV methods to predict physical quantities such as water stage and discharge.</p>
       <p>More detail about these steps:</p>
       <h3>Deploying Cameras in Hawaii </h3>
-      <p>USGS has many stream gauging stations across the US and almost a thousand camera sites, enhancing the data collection with images and videos. There are, however, no cameras in streams on Hawaii. Our team in the WRRC has deployed 4 game cameras (and counting) in streams on Maui (@Chris: stream names?) and O’ahu (Manoa Stream and Pukele Stream near USGS gauging stations) to take timelapse images. These efforts work towards the goal of providing a complete and automatic environmental monitoring system for the Hawaiian islands. </p>
+      <p>USGS has many stream gauging stations across the US and almost a thousand camera sites, enhancing the data collection with images and videos. There are, however, no cameras in streams on Hawaii. Our team in the WRRC has deployed 4 game cameras (and counting) in streams on Maui and O’ahu (Manoa Stream and Pukele Stream near USGS gauging stations) to take timelapse images. These efforts work towards the goal of providing a complete and automatic environmental monitoring system for the Hawaiian islands. </p>
+
+      <figure>
+	<img src="images/usgs_map.png">
+	<figcaption>Every dot represents a USGS gauging station</figcaption>
+      </figure>
+
       <h3>Image Labeling </h3>
       <p>In order to train a CV model that can predict the presence of water and water stage, we need labeled training data. The large data networks of USGS and NEON already come with the data from stream gauges. The Kimmel dataset is labeled in different classes. There are two main challenges regarding labels that we need to address: (1) For a model to be generalizable to unseen sites the labels have to be uniform in some way, absolute values of water stage for example might confuse a model. A possible solution for this as seen in \cite{calibrated} is to normalize the data across training sites and train the model on relative values compared to the mean value of the site. (2) We want to use all available data for training but the labels do not trivially align, some images have class labels while others have continuous values corresponding to the measured quantities. This work leverages both categorical and continuous labels by converting continuous measurements into class labels using thresholding, enabling all available images to be integrated in a unified training dataset. </p>
       <h3>Training a CV Model </h3>
@@ -195,12 +223,6 @@
       <h2>Preliminary Results</h2>
       <p>With the one labeled data set already available, we were able to train a model with the aforementioned architecture. A pretrained ResNet-50 extracts the features into a vector (2048 dimensions). A simple neural network with three hidden layers was then trained to classify the images as water/no water and multi classification (freshet, water running, isolated pools, dry bed). In this preliminary study only 15k images from one site were used. The camera angle is fixed. With 70\% training data and 20\% validation the binary model (water / no water) hit 96\% accuracy on the validation set while the 4-class model achieved 92\% accuracy on the validation set. </p>
       <p>These results show that this method is promising. As of now, the model is site specific and might have different results for other sites. By collecting more images from additional sites or different angles, it will be possible to train a general model.</p>
-
-      <!-- Example: insert a training graph -->
-      <figure>
-        <img src="images/training_accuracy.png" alt="Training accuracy graph">
-        <figcaption>Validation accuracy for preliminary classification models.</figcaption>
-      </figure>
     </section>
 
     <section id="next-steps">
