@@ -1,0 +1,14 @@
+# project
+wandb_project: 'water_stage (4 lvl)'
+wandb_name: 'run 9/4'
+data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/image_inventory_cam_1000.xlsx'
+model_save_path: 'classifier_head.pth'
+
+# training parameters
+learning_rate: 0.001
+epochs: 100
+batch_size: 32
+train_split: 0.7
+val_split: 0.2
+random_seed: 42
+
