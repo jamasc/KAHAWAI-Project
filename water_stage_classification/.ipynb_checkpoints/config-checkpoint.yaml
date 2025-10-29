@@ -1,6 +1,6 @@
 # project
-wandb_project: 'water_stage (4 lvl)'
-wandb_name: 'run 9/4'
+wandb_project: 'water_stage_classification'
+wandb_name: 'run 10/29'
 data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/image_inventory_cam_1000.xlsx'
 model_save_path: 'classifier_head.pth'
 

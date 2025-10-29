@@ -12,5 +12,5 @@
 source /opt/apps/software/lang/Anaconda3/2024.02-1/etc/profile.d/conda.sh
 conda activate streamflow-env
 
-## Run your SimCLR training script
+## Run script
 python train.py
