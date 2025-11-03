@@ -4,3 +4,4 @@ KAHAWAI (Streamflow) Project
 - images: images for the web page
 - pixel counting: experiments with water segmentation and pixel counting
 - water_stage_classification: all training code for resnet50 embedding classifier
+- tls_frame_extractor: notebook to extract images from .tls timelapse videos
