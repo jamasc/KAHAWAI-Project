@@ -2,7 +2,6 @@
 wandb_project: 'water_stage_classification'
 wandb_name: 'run 10/29'
 data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/image_inventory_cam_1000.xlsx'
-embedding_path: 'pukele_embeddings.pt'
 model_save_path: 'classifier_head.pth'
 
 # training parameters
