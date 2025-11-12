@@ -1,0 +1,8 @@
+Traceback (most recent call last):                                                                                                             
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train1.py", line 104, in <module>
+    main(args.config)
+    ~~~~^^^^^^^^^^^^^
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train1.py", line 68, in main
+    total_loss += loss.item() * images.size(0)
+                                ^^^^^^
+NameError: name 'images' is not defined

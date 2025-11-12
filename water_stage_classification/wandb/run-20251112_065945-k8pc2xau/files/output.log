@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train1.py", line 104, in <module>
+    main(args.config)
+    ~~~~^^^^^^^^^^^^^
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train1.py", line 33, in main
+    dataset = EmbeddingDataset(config['embedding_path'])
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/dataset.py", line 108, in __init__
+    data = torch.load(embeddings_file)
+           ^^^^^
+NameError: name 'torch' is not defined

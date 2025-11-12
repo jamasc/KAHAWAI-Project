@@ -14,10 +14,10 @@ from models import ResNet50Embedder
 from dataset import ImagePathDataset
 
 # --- Hyperparameters ---
-excel_file = "pukele_datasheet.xlsx"  # CSV with 'path','label' columns
+excel_file = "../../data/pukele_datasheet.xlsx"  # CSV with 'path','label' columns
 batch_size = 32
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-output_file = "pukele_embeddings.pt"
+output_file = "../../features/pukele_embeddings.pt"
 
 # --- Transformations ---
 transform = transforms.Compose([
@@ -28,7 +28,7 @@ transform = transforms.Compose([
 ])
 
 # --- Load dataset and dataloader ---
-dataset = ImagePathDataset(excel_file, transform=transform)
+dataset = ImagePathDataset(excel_file, transform=transform, new_root='/home/jans26/koa_scratch/streamflow/images')
 dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
 
 # --- Load model ---

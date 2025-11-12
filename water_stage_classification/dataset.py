@@ -6,6 +6,7 @@
 # 3 to 3 (freshet)
 # the last two labels ('poor quality' and 'not working') are discarded
 
+import torch
 from torch.utils.data import Dataset, random_split
 from PIL import Image
 import pandas as pd

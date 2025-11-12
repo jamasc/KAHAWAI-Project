@@ -65,7 +65,7 @@ def main(config_path):
             loss.backward()
             optimizer.step()
     
-            total_loss += loss.item() * images.size(0)
+            total_loss += loss.item() * features.size(0)
             _, predicted = outputs.max(1)
             correct += (predicted == labels).sum().item()
             total += labels.size(0)
@@ -81,7 +81,7 @@ def main(config_path):
                 features, labels = features.to(device), labels.to(device)
                 outputs = classifier(features)
                 loss = criterion(outputs, labels)
-                val_loss += loss.item() * images.size(0)
+                val_loss += loss.item() * features.size(0)
                 _, predicted = outputs.max(1)
                 val_correct += (predicted == labels).sum().item()
                 val_total += labels.size(0)

@@ -1,12 +1,12 @@
 # project
-wandb_project: 'water_stage_classification'
-wandb_name: 'run 10/29'
+wandb_project: 'pukele_classification'
+wandb_name: 'run 11/11'
 data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/image_inventory_cam_1000.xlsx'
-embedding_path: 'pukele_embeddings.pt'
-model_save_path: 'classifier_head.pth'
+embedding_path: '/home/jans26/koa_scratch/streamflow/features/pukele_embeddings.pt'
+model_save_path: '/home/jans26/koa_scratch/streamflow/models/pukele_classifier_head.pth'
 
 # training parameters
-learning_rate: 0.001
+learning_rate: 0.01
 epochs: 100
 batch_size: 32
 train_split: 0.7

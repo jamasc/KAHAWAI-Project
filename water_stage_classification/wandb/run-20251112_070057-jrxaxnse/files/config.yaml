@@ -1,0 +1,100 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            0p5tjsy5rotz2uebl70z0vfuz2cphncy:
+                codePath: water_stage_classification/train1.py
+                codePathLocal: train1.py
+                cpu_count: 48
+                cpu_count_logical: 48
+                cudaVersion: "12.9"
+                disk:
+                    /:
+                        total: "135020818432"
+                        used: "7534784512"
+                executable: /home/jans26/.conda/envs/streamflow-env/bin/python
+                git:
+                    commit: d989590a7131e6a91413057845897f60b97edb38
+                    remote: https://github.com/jamasc/KAHAWAI-Project.git
+                gpu: NVIDIA RTX A4000
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6144
+                      memoryTotal: "17171480576"
+                      name: NVIDIA RTX A4000
+                      uuid: GPU-5d618824-b0a2-35f5-01e6-7c0f7abfdd89
+                host: gn-16-34-00
+                memory:
+                    total: "270041636864"
+                os: Linux-5.14.0-570.55.1.el9_6.x86_64-x86_64-with-glibc2.34
+                program: /mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train1.py
+                python: CPython 3.13.5
+                root: /mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification
+                slurm:
+                    cluster_name: mana
+                    conf: /etc/slurm/slurm.conf
+                    cpus_on_node: "1"
+                    cpus_per_task: "1"
+                    export_env: NONE
+                    get_user_env: "1"
+                    gpus_on_node: "1"
+                    gtids: "0"
+                    immediate: "120"
+                    job_account: uh
+                    job_cpus_per_node: "1"
+                    job_end_time: "1762932930"
+                    job_gid: "7489"
+                    job_gpus: "0"
+                    job_id: "8914757"
+                    job_name: sys/dashboard/sys/jupyter_lab
+                    job_nodelist: gn-16-34-00
+                    job_num_nodes: "1"
+                    job_partition: kill-shared
+                    job_qos: normal
+                    job_start_time: "1762929330"
+                    job_uid: "7489"
+                    job_user: jans26
+                    jobid: "8914757"
+                    localid: "0"
+                    mem_per_node: "204800"
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: gn-16-34-00
+                    nprocs: "1"
+                    ntasks: "1"
+                    ntasks_per_node: "1"
+                    oom_kill_step: "0"
+                    prio_process: "0"
+                    procid: "0"
+                    submit_dir: /var/www/ood/apps/sys/dashboard
+                    submit_host: ood-0050
+                    task_pid: "1928118"
+                    tasks_per_node: "1"
+                    topology_addr: gn-16-34-00
+                    topology_addr_pattern: node
+                    tres_per_task: cpu=1
+                startedAt: "2025-11-12T07:00:57.693613Z"
+                writerId: 0p5tjsy5rotz2uebl70z0vfuz2cphncy
+        m: []
+        python_version: 3.13.5
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 13
+                - 16
+            "4": 3.13.5
+            "5": 0.21.0
+            "12": 0.21.0
+            "13": linux-x86_64
+batch_size:
+    value: 32
+epochs:
+    value: 1
+learning_rate:
+    value: 0.01
