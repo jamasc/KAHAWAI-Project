@@ -1,7 +1,7 @@
 # project
 wandb_project: 'pukele_classification'
 wandb_name: 'run 11/11'
-data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/image_inventory_cam_1000.xlsx'
+data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/pukele_datasheet.xlsx'
 embedding_path: '/home/jans26/koa_scratch/streamflow/features/pukele_embeddings.pt'
 model_save_path: '/home/jans26/koa_scratch/streamflow/models/pukele_classifier_head.pth'
 

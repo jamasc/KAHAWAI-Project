@@ -5,19 +5,23 @@
 
 import torch
 import torch.nn as nn
-from torch.utils.data import DataLoader, Subset
+from torch.utils.data import DataLoader, Subset, random_split
 from torchvision import transforms
 from collections import defaultdict
 import torch.nn.functional as F
+import yaml
+import matplotlib.pyplot as plt
 
 from dataset import ImagePathDataset
 from models import ResNet50Embedder, ClassificationHead
 from utils import get_embeddings, load_model, show_image
 
 # Parameters
-model_path = "pukele_classifier_head.pth"
-data_sheet = "pukele_datasheet.xlsx"
 is_designated_test_set = False
+
+# Load config from YAML
+with open("config.yaml", "r") as f:
+    config = yaml.safe_load(f)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -29,18 +33,24 @@ transform = transforms.Compose([
                          std=[0.229, 0.224, 0.225])
 ])
 
-dataset = ImagePathDataset(data_sheet, transform=transform, new_root='/home/jans26/koa_scratch/streamflow/images')
+dataset = ImagePathDataset(config['data_inventory_path'], transform=transform, new_root='/home/jans26/koa_scratch/streamflow/images')
+test_dataset = dataset
 
 if not is_designated_test_set:
-    _, _, test_dataset = split_dataset(dataset, seed=42)
-else:
-    test_dataset = dataset
+    train_size = int(config['train_split'] * len(dataset))
+    val_size = int(config['val_split'] * len(dataset))
+    test_size = len(dataset) - train_size - val_size
+
+    _, _, test_dataset = random_split(
+        dataset, [train_size, val_size, test_size],
+        generator=torch.Generator().manual_seed(config['random_seed'])  # for reproducibility
+    )
     
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
 # --- Load Models ---
 embedder = ResNet50Embedder().to(device)
-classifier = load_model(ClassificationHead, model_path, device)
+classifier = load_model(ClassificationHead, config['model_save_path'], device)
 classifier.eval()
 
 criterion = nn.CrossEntropyLoss()
