@@ -14,7 +14,7 @@ import os
 
 binary_class_map = {0:2, 1:0, 2:1, 3:3}
 
-# dataset of labeled images from DAR
+# dataset of labeled images from DAR TODO: remake
 class BinaryStreamFlowDataset(Dataset):
     def __init__(self, excel_file, transform=None, limit=float('inf')):
         self.data = []

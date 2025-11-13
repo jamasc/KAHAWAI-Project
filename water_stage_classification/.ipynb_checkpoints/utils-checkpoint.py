@@ -1,4 +1,5 @@
 import torch
+import matplotlib.pyplot as plt
 
 def get_embeddings(embedder, images):
     with torch.no_grad():
@@ -13,3 +14,11 @@ def load_model(model_class, path, device):
     model = model_class().to(device)
     model.load_state_dict(torch.load(path, map_location=device))
     return model
+
+def show_image(img_tensor, title=""):
+    """Helper function to display a single image tensor."""
+    img = img_tensor.detach().cpu().permute(1, 2, 0)  # C,H,W -> H,W,C
+    img = (img - img.min()) / (img.max() - img.min())  # normalize for display
+    plt.imshow(img)
+    plt.title(title)
+    plt.axis('off')
