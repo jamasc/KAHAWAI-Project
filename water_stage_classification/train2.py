@@ -50,6 +50,7 @@ def main(config_path):
         
         train_bar = tqdm(train_loader, desc=f"Epoch {epoch+1} [Train]", leave=False)
         for features, labels in train_bar:
+            labels = labels - 1
             features, labels = features.to(device), labels.to(device)
             outputs = classifier(features)
             loss = criterion(outputs, labels)
@@ -71,6 +72,7 @@ def main(config_path):
         val_loss, val_correct, val_total = 0, 0, 0
         with torch.no_grad():
             for features, labels in val_loader:
+                labels = labels - 1
                 features, labels = features.to(device), labels.to(device)
                 outputs = classifier(features)
                 loss = criterion(outputs, labels)

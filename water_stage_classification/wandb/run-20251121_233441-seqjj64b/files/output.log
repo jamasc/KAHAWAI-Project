@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train2.py", line 97, in <module>
+    main(args.config)
+    ~~~~^^^^^^^^^^^^^
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train2.py", line 35, in main
+    train_dataset, val_dataset, _ = stratified_split(dataset, config['val_split'], 1 - config['train_split'] - config['val_split'], seed=config['random_seed'])
+                                    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/utils.py", line 50, in stratified_split
+    train_dataset = Subset(dataset, train_indices)
+                    ^^^^^^
+NameError: name 'Subset' is not defined

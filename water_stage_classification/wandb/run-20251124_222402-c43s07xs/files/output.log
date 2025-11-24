@@ -1,0 +1,15 @@
+HOW MANY LABELS: 3156
+DATASET LENGTHS: TRAIN: 2212, VAL: 472
+Traceback (most recent call last):                                                                                                             
+VALIDATION LABELS: tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4])
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train2.py", line 101, in <module>
+    main(args.config)
+    ~~~~^^^^^^^^^^^^^
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train2.py", line 81, in main
+    val_loss += loss.item() * features.size(0)
+                ~~~~~~~~~^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.

@@ -52,10 +52,10 @@ class ImagePathDataset(Dataset):
         self,
         excel_file,
         img_col="path",
-        label_col="top_5_percent",
+        label_col="label",
         transform=None,
         new_root=None,
-        old_roots=("D:/", "E:/")
+        old_roots=("D:/", "E:/backup/")
     ):
         """
         Args:

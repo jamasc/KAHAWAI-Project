@@ -2,6 +2,7 @@ import torch
 import matplotlib.pyplot as plt
 from collections import defaultdict
 import random
+from torch.utils.data import Subset
 
 def get_embeddings(embedder, images):
     with torch.no_grad():
@@ -31,7 +32,7 @@ def stratified_split(dataset, val_ratio, test_ratio, seed=42):
     labels = [dataset[i][1] for i in range(len(dataset))]
     label_to_indices = defaultdict(list)
     for idx, label in enumerate(labels):
-        label_to_indices[label].append(idx)
+        label_to_indices[label.item()].append(idx)
     
     train_indices = []
     val_indices = []

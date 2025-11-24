@@ -1,0 +1,83 @@
+{
+  "os":  "Linux-5.14.0-570.55.1.el9_6.x86_64-x86_64-with-glibc2.34",
+  "python":  "CPython 3.13.5",
+  "startedAt":  "2025-11-24T22:08:45.331653Z",
+  "program":  "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train2.py",
+  "codePath":  "water_stage_classification/train2.py",
+  "codePathLocal":  "train2.py",
+  "git":  {
+    "remote":  "https://github.com/jamasc/KAHAWAI-Project.git",
+    "commit":  "e62a80b36bea2c6a43b7f33b2d3fab832a735bba"
+  },
+  "root":  "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification",
+  "host":  "gn-09-23-00",
+  "executable":  "/home/jans26/.conda/envs/streamflow-env/bin/python",
+  "cpu_count":  192,
+  "cpu_count_logical":  192,
+  "gpu":  "NVIDIA H200 NVL",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "405587419136",
+      "used":  "8613126144"
+    }
+  },
+  "memory":  {
+    "total":  "811174842368"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA H200 NVL",
+      "memoryTotal":  "150754820096",
+      "cudaCores":  16896,
+      "architecture":  "Hopper",
+      "uuid":  "GPU-e7ccccad-2f87-3a72-972e-5bc71aa076db"
+    }
+  ],
+  "cudaVersion":  "12.9",
+  "slurm":  {
+    "cluster_name":  "mana",
+    "conf":  "/etc/slurm/slurm.conf",
+    "cpus_on_node":  "1",
+    "cpus_per_task":  "1",
+    "export_env":  "NONE",
+    "get_user_env":  "1",
+    "gpus_on_node":  "1",
+    "gtids":  "0",
+    "immediate":  "120",
+    "job_account":  "uh",
+    "job_cpus_per_node":  "1",
+    "job_end_time":  "1764025230",
+    "job_gid":  "7489",
+    "job_gpus":  "0",
+    "job_id":  "9065027",
+    "job_name":  "sys/dashboard/sys/jupyter_lab",
+    "job_nodelist":  "gn-09-23-00",
+    "job_num_nodes":  "1",
+    "job_partition":  "kill-shared",
+    "job_qos":  "normal",
+    "job_start_time":  "1764021630",
+    "job_uid":  "7489",
+    "job_user":  "jans26",
+    "jobid":  "9065027",
+    "localid":  "0",
+    "mem_per_node":  "204800",
+    "nnodes":  "1",
+    "nodeid":  "0",
+    "nodelist":  "gn-09-23-00",
+    "nprocs":  "1",
+    "ntasks":  "1",
+    "ntasks_per_node":  "1",
+    "oom_kill_step":  "0",
+    "prio_process":  "0",
+    "procid":  "0",
+    "submit_dir":  "/var/www/ood/apps/sys/dashboard",
+    "submit_host":  "ood-0050",
+    "task_pid":  "1549551",
+    "tasks_per_node":  "1",
+    "topology_addr":  "gn-09-23-00",
+    "topology_addr_pattern":  "node",
+    "tres_per_task":  "cpu=1"
+  },
+  "writerId":  "jz55kde3cvu4jfkjf4prov7rs2dl8qoj"
+}

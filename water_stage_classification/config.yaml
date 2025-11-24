@@ -1,15 +1,15 @@
 # project
-wandb_project: 'pukele_classification'
-wandb_name: 'run 11/11'
+wandb_project: 'DAR_baseline_test'
+wandb_name: 'test run 11/21'
 data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/pukele_datasheet.xlsx'
-embedding_path: '/home/jans26/koa_scratch/streamflow/features/pukele_embeddings.pt'
-model_save_path: '/home/jans26/koa_scratch/streamflow/models/pukele_classifier_head.pth'
+embedding_path: '/home/jans26/koa_scratch/streamflow/features/DAR_1000_balanced_embeddings.pt'
+model_save_path: '/home/jans26/koa_scratch/streamflow/models/DAR_1000_balanced_classifier.pth'
 
 # training parameters
 learning_rate: 0.01
-epochs: 100
+epochs: 1
 batch_size: 32
 train_split: 0.7
-val_split: 0.2
+val_split: 0.15
 random_seed: 42
 

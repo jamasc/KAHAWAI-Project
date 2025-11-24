@@ -1,0 +1,9 @@
+DATASET LENGTHS: TRAIN: 3156, VAL: 0
+Traceback (most recent call last):                                                                                                             
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train2.py", line 101, in <module>
+    main(args.config)
+    ~~~~^^^^^^^^^^^^^
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/water_stage_classification/train2.py", line 86, in main
+    val_acc = val_correct / val_total
+              ~~~~~~~~~~~~^~~~~~~~~~~
+ZeroDivisionError: division by zero
