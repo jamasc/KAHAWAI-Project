@@ -13,4 +13,4 @@ source /opt/apps/software/lang/Anaconda3/2024.02-1/etc/profile.d/conda.sh
 conda activate streamflow-env
 
 ## Run script
-python train2.py --config /mnt/lustre/koa/scratch/jans26/KAHAWAI-Project/water_stage_classification/config_DAR1000.yaml
+python train2.py --config /mnt/lustre/koa/scratch/jans26/KAHAWAI-Project/water_stage_classification/config_DAR1003.yaml

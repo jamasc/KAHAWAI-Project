@@ -1,0 +1,15 @@
+# project
+wandb_project: 'DAR_baseline_1006'
+wandb_name: 'run 11/24'
+data_inventory_path: ''
+embedding_path: '/home/jans26/koa_scratch/streamflow/features/DAR_1006_balanced_embeddings.pt'
+model_save_path: '/home/jans26/koa_scratch/streamflow/models/DAR_1006_balanced_classifier.pth'
+
+# training parameters
+learning_rate: 0.001
+epochs: 100
+batch_size: 32
+train_split: 0.7
+val_split: 0.15
+random_seed: 42
+
