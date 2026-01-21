@@ -14,7 +14,7 @@ https://drive.google.com/drive/folders/1mXRH7iA6P0N-J982yP7fZhFcnFB25WYP?ths=tru
 
 
 
-Workflow:
+Workflow for deployed cams:
 - collect image data from cameras
 - call tls_frame_extractor to get the individual images
 - call data_sheet_creator to put image paths and timestamps into a sheet
@@ -22,5 +22,5 @@ Workflow:
 - add labels to the sheet with add_labels
 - upload sheet and images to koa
 - clone repo into koa
-- get_feature_dataset to create dataset of images and save that on koa
+- get_feature_dataset to create dataset of image features and save that on koa
 - train1
