@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBKNSYSF5S"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-LBKNSYSF5S');
+	</script>
+	
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/hivis/favicon.ico" />
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/38af08b53b.js" crossorigin="anonymous"></script>
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     	crossorigin=""/>
+	<!-- Leaflet tiles - must be after leaflet -->
+	 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ 		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ 		crossorigin=""></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIVIS</title>
+    <script type="module" crossorigin src="/hivis/assets/index-BryQUl58.js"></script>
+    <link rel="modulepreload" crossorigin href="/hivis/assets/vendor-BtG7mxir.js">
+    <link rel="modulepreload" crossorigin href="/hivis/assets/plotly-CXfT_C7x.js">
+    <link rel="modulepreload" crossorigin href="/hivis/assets/leaflet-2Qw6R0cr.js">
+    <link rel="stylesheet" crossorigin href="/hivis/assets/index-CigylWx0.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
