@@ -1,0 +1,14 @@
+plan:
+
+endgoal is to have one script where you can input camera sites and start/end date time and get an excel sheet with time, site info, and measures. (maybe with link to download image)
+
+another script reads that excel sheet, downloads the images into a folder, and adds a column with the storage info. later the get_features function can extract these features and save them for training
+
+TODO:
+
+[X] try downloading one image with script     --- hivis_single_image_scraper
+[X] make the first script to get datasheets     --- usgs_data_scraper_1
+[x] make second script that loops thru datasheet and adds image links     --- hivis_image_url_finder
+[ ] finish mastersheet so scraper can run automatic
+[ ] get_feature function should be able to run on any datasheet
+[ ] make one training script/process that can run on everything (own, dar, hivis)
