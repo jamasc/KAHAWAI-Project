@@ -9,6 +9,12 @@ TODO:
 [X] try downloading one image with script     --- hivis_single_image_scraper
 [X] make the first script to get datasheets     --- usgs_data_scraper_1
 [x] make second script that loops thru datasheet and adds image links     --- hivis_image_url_finder
+[x] combine into one script that takes info from mastersheet and creates hivis datasheets per site     --- hivis_datasheet_creator
+[ ] test + print some feedback (tqdm)
 [ ] finish mastersheet so scraper can run automatic
 [ ] get_feature function should be able to run on any datasheet
 [ ] make one training script/process that can run on everything (own, dar, hivis)
+
+
+
+
