@@ -1,9 +1,9 @@
 # project
-wandb_project: 'DAR_baseline_1000'
-wandb_name: 'run 11/24'
-data_inventory_path: ''
-embedding_path: '/home/jans26/koa_scratch/streamflow/features/DAR_1000_balanced_embeddings.pt'
-model_save_path: '/home/jans26/koa_scratch/streamflow/models/DAR_1000_balanced_classifier.pth'
+wandb_project: 'DAR_baseline'
+wandb_name: '1000 run3/2'
+data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/DAR_1000_stratified.xlsx'
+embedding_path: '/home/jans26/koa_scratch/streamflow/features/DAR_1000_stratified_embeddings.pt'
+model_save_path: '/home/jans26/koa_scratch/streamflow/models/DAR_1000_stratified_classifier.pth'
 
 # training parameters
 learning_rate: 0.001
@@ -12,4 +12,3 @@ batch_size: 32
 train_split: 0.7
 val_split: 0.15
 random_seed: 42
-

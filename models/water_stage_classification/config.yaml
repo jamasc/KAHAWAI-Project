@@ -1,9 +1,9 @@
 # project
-wandb_project: 'DAR_baseline_test'
-wandb_name: 'test run 11/21'
-data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/pukele_datasheet.xlsx'
-embedding_path: '/home/jans26/koa_scratch/streamflow/features/DAR_1000_balanced_embeddings.pt'
-model_save_path: '/home/jans26/koa_scratch/streamflow/models/DAR_1000_balanced_classifier.pth'
+wandb_project: 'DAR_baseline_test_1'
+wandb_name: 'test run 3/2'
+data_inventory_path: '/home/jans26/koa_scratch/streamflow/data/DAR_1000_stratified.xlsx'
+embedding_path: '/home/jans26/koa_scratch/streamflow/features/DAR_1000_stratified_embeddings.pt'
+model_save_path: '/home/jans26/koa_scratch/streamflow/models/DAR_1000_stratified_classifier.pth'
 
 # training parameters
 learning_rate: 0.01

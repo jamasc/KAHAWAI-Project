@@ -5,12 +5,12 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32000
 #SBATCH --gres=gpu:1
-#SBATCH --error=logs/pxlct-%A.err
-#SBATCH --output=logs/pxlct-%A.out
+#SBATCH --error=logs/slurm-%A.err
+#SBATCH --output=logs/slurm-%A.out
 
 ## Load modules (adjust if needed)
 source /opt/apps/software/lang/Anaconda3/2024.02-1/etc/profile.d/conda.sh
 conda activate streamflow-env
 
 ## Run script
-python train2.py --config /mnt/lustre/koa/scratch/jans26/KAHAWAI-Project/water_stage_classification/config_DAR1001.yaml
+python train2.py --config /mnt/lustre/koa/scratch/jans26/KAHAWAI-Project/models/water_stage_classification/config_DAR1001.yaml
