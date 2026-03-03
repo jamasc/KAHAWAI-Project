@@ -26,3 +26,8 @@ Workflow for deployed cams:
 - clone repo into koa
 - get_feature_dataset to create dataset of image features and save that on koa
 - train1
+
+Workflow for DAR dataset:
+- upload to KOA
+- get embeddings
+- train
