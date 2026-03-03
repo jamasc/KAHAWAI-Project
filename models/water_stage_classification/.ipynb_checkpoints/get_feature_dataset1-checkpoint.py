@@ -1,6 +1,6 @@
 # this code creates a dataset with the features obtained by pretrained resnet50
-# right now works for pukele sheet
-# TODO make it with input args to define datasheet
+# works for DAR and pukele (see v0)
+# call in interactive jupyter lab session on KOA from terminal
 
 import torch
 from torch import nn
@@ -15,24 +15,26 @@ from models import ResNet50Embedder
 from dataset import ImagePathDataset
 
 # --- Hyperparameters ---
-excel_files = ["../../data/DAR_1000_balanced.xlsx",
-               "../../data/DAR_1001_balanced.xlsx",
-               "../../data/DAR_1002_balanced.xlsx",
-               "../../data/DAR_1003_balanced.xlsx",
-               "../../data/DAR_1004_balanced.xlsx",
-               "../../data/DAR_1005_balanced.xlsx",
-               "../../data/DAR_1006_balanced.xlsx"
-              ]
+excel_files = [
+    "../../data/DAR_1000_stratified.xlsx",
+    "../../data/DAR_1001_stratified.xlsx",
+    "../../data/DAR_1002_stratified.xlsx",
+    "../../data/DAR_1003_stratified.xlsx",
+    "../../data/DAR_1004_stratified.xlsx",
+    "../../data/DAR_1005_stratified.xlsx",
+    "../../data/DAR_1006_stratified.xlsx",
+]
 batch_size = 32
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-output_files = ["../../features/DAR_1000_balanced_embeddings.pt",
-               "../../features/DAR_1001_balanced_embeddings.pt",
-               "../../features/DAR_1002_balanced_embeddings.pt",
-               "../../features/DAR_1003_balanced_embeddings.pt",
-               "../../features/DAR_1004_balanced_embeddings.pt",
-               "../../features/DAR_1005_balanced_embeddings.pt",
-               "../../features/DAR_1006_balanced_embeddings.pt"
-              ]
+output_files = [
+    "../../features/DAR_1000_stratified_embeddings.pt",
+    "../../features/DAR_1001_stratified_embeddings.pt",
+    "../../features/DAR_1002_stratified_embeddings.pt",
+    "../../features/DAR_1003_stratified_embeddings.pt",
+    "../../features/DAR_1004_stratified_embeddings.pt",
+    "../../features/DAR_1005_stratified_embeddings.pt",
+    "../../features/DAR_1006_stratified_embeddings.pt",
+]
 
 # --- Transformations ---
 transform = transforms.Compose([

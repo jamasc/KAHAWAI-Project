@@ -1,6 +1,5 @@
 # this code creates a dataset with the features obtained by pretrained resnet50
 # right now works for pukele sheet
-# TODO make it with input args to define datasheet
 
 import torch
 from torch import nn
