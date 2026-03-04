@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification/train2.py", line 99, in <module>
+    main(args.config)
+    ~~~~^^^^^^^^^^^^^
+  File "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification/train2.py", line 17, in main
+    with open(config_path, "r") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/lustre/koa/scratch/jans26/KAHAWAI-Project/models/water_stage_classification/config_DAR1000.yaml'
