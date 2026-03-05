@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --job-name=water_stage
+#SBATCH --partition=gpu
+#SBATCH --time=2-00:00:00
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32000
+#SBATCH --gres=gpu:1
+#SBATCH --error=logs/slurm-%A.err
+#SBATCH --output=logs/slurm-%A.out
+
+## Load modules (adjust if needed)
+source /opt/apps/software/lang/Anaconda3/2024.02-1/etc/profile.d/conda.sh
+conda activate streamflow-env
+
+## Run script
+python train2.py --config /mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification/config_DAR_comb_3.yaml

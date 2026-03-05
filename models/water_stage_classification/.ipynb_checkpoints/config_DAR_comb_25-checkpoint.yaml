@@ -1,0 +1,14 @@
+# project
+wandb_project: 'DAR_combined_baseline'
+wandb_name: '01346 run3/5'
+data_inventory_path: ''
+embedding_path: '/home/jans26/koa_scratch/streamflow/features/DAR_combined_embeddings_01346.pt'
+model_save_path: '/home/jans26/koa_scratch/streamflow/models/DAR_combined_classifier_01346.pth'
+
+# training parameters
+learning_rate: 0.001
+epochs: 100
+batch_size: 32
+train_split: 0.7
+val_split: 0.15
+random_seed: 42
