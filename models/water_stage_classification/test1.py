@@ -10,10 +10,12 @@ from collections import defaultdict
 import torch.nn.functional as F
 import yaml
 import matplotlib.pyplot as plt
+import argparse
+import pandas as pd
 
-from dataset import ImagePathDataset
+from dataset import EmbeddingDataset
 from models import ResNet50Embedder, ClassificationHead
-from utils import get_embeddings, load_model, show_image
+from utils import get_embeddings, load_model, stratified_split
 
 def main(config_path):
     # Load config from YAML
@@ -26,7 +28,7 @@ def main(config_path):
     dataset = EmbeddingDataset(config['embedding_path']) 
 
     _, _, test_dataset = stratified_split(dataset, config['val_split'], 1 - config['train_split'] - config['val_split'], seed=config['random_seed'])
-
+    
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
     # --- Load Classifier ---
@@ -50,6 +52,7 @@ def main(config_path):
 
     with torch.no_grad():
         for features, labels in test_loader:
+            labels = labels - 1
             # compute prediction and confidences
             features, labels = features.to(device), labels.to(device)
             outputs = classifier(features)
@@ -69,20 +72,11 @@ def main(config_path):
                 label = labels[i].item()
                 pred = predicted[i].item()
                 conf = confidences[i].item()
-                img = images[i].cpu()
 
                 label_counts[label] += 1
                 if pred == label:
                     label_correct[label] += 1
                     label_confidences[label].append(conf)
-
-                # Track best (highest confidence correct) and worst (lowest confidence incorrect)
-                if pred == label:
-                    if label not in best_samples or conf > best_samples[label]["conf"]:
-                        best_samples[label] = {"img": img, "pred": pred, "conf": conf}
-                else:
-                    if label not in worst_samples or conf < worst_samples[label]["conf"]:
-                        worst_samples[label] = {"img": img, "pred": pred, "conf": conf}
 
     test_acc = test_correct / test_total
     test_loss = test_loss / test_total
