@@ -1,0 +1,5 @@
+embedding_path: /home/jans26/koa_scratch/streamflow/features/DAR_1001_stratified_embeddings.pt
+model_save_path: /home/jans26/koa_scratch/streamflow/models/DAR_combined_classifier_023456.pth
+random_seed: 42
+train_split: 0.7
+val_split: 0.15

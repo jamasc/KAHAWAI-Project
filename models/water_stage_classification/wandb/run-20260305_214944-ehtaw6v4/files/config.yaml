@@ -1,0 +1,99 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            4uynmagmepu6cbjcagd87i647kdl873l:
+                args:
+                    - --config
+                    - /mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification/config_DAR_comb_3.yaml
+                codePath: models/water_stage_classification/train2.py
+                codePathLocal: train2.py
+                cpu_count: 48
+                cpu_count_logical: 96
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "135016448000"
+                        used: "7460651008"
+                email: jans26@hawaii.edu
+                executable: /home/jans26/.conda/envs/streamflow-env/bin/python
+                git:
+                    commit: 65868970e1f44672b64694d4e690e940af73175e
+                    remote: https://github.com/jamasc/KAHAWAI-Project.git
+                gpu: NVIDIA A30
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 3584
+                      memoryTotal: "25769803776"
+                      name: NVIDIA A30
+                      uuid: GPU-74d55d4e-5353-d2eb-8d4c-06d5559b7456
+                host: gn-09-13-00
+                memory:
+                    total: "270032900096"
+                os: Linux-5.14.0-611.34.1.el9_7.x86_64-x86_64-with-glibc2.34
+                program: /mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification/train2.py
+                python: CPython 3.13.5
+                root: /mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification
+                slurm:
+                    cluster_name: mana
+                    conf: /etc/slurm/slurm.conf
+                    cpus_on_node: "8"
+                    cpus_per_task: "8"
+                    gpus_on_node: "1"
+                    gtids: "0"
+                    immediate: "120"
+                    job_account: uh
+                    job_cpus_per_node: "8"
+                    job_end_time: "1772920174"
+                    job_gid: "7489"
+                    job_gpus: "1"
+                    job_id: "11421685"
+                    job_name: water_stage
+                    job_nodelist: gn-09-13-00
+                    job_num_nodes: "1"
+                    job_partition: gpu
+                    job_qos: normal
+                    job_start_time: "1772747374"
+                    job_uid: "7489"
+                    job_user: jans26
+                    jobid: "11421685"
+                    localid: "0"
+                    mem_per_node: "32000"
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: gn-09-13-00
+                    oom_kill_step: "0"
+                    prio_process: "0"
+                    procid: "0"
+                    submit_dir: /mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification
+                    submit_host: login-0102
+                    task_pid: "269809"
+                    tasks_per_node: "1"
+                    topology_addr: gn-09-13-00
+                    topology_addr_pattern: node
+                    tres_per_task: cpu=8
+                startedAt: "2026-03-05T21:49:44.986979Z"
+                writerId: 4uynmagmepu6cbjcagd87i647kdl873l
+        m: []
+        python_version: 3.13.5
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 13
+                - 16
+            "4": 3.13.5
+            "5": 0.21.0
+            "12": 0.21.0
+            "13": linux-x86_64
+batch_size:
+    value: 32
+epochs:
+    value: 100
+learning_rate:
+    value: 0.001
