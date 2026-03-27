@@ -1,0 +1,83 @@
+{
+  "os":  "Linux-5.14.0-611.34.1.el9_7.x86_64-x86_64-with-glibc2.34",
+  "python":  "CPython 3.13.5",
+  "startedAt":  "2026-03-07T06:13:14.027260Z",
+  "args":  [
+    "--config",
+    "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification/config_DAR_comb_046.yaml"
+  ],
+  "program":  "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification/train2.py",
+  "codePath":  "models/water_stage_classification/train2.py",
+  "codePathLocal":  "train2.py",
+  "git":  {
+    "remote":  "https://github.com/jamasc/KAHAWAI-Project.git",
+    "commit":  "6dd012f01ad168ea2802c9c743e13b7d0efd5155"
+  },
+  "email":  "jans26@hawaii.edu",
+  "root":  "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification",
+  "host":  "gn-16-14-00",
+  "executable":  "/home/jans26/.conda/envs/streamflow-env/bin/python",
+  "cpu_count":  48,
+  "cpu_count_logical":  48,
+  "gpu":  "Tesla V100-SXM2-32GB",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "101219061760",
+      "used":  "10803847168"
+    }
+  },
+  "memory":  {
+    "total":  "202438127616"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "Tesla V100-SXM2-32GB",
+      "memoryTotal":  "34359738368",
+      "cudaCores":  5120,
+      "architecture":  "Volta",
+      "uuid":  "GPU-6aee7a3c-b18d-d64d-e338-f6411be49cf5"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "slurm":  {
+    "cluster_name":  "mana",
+    "conf":  "/etc/slurm/slurm.conf",
+    "cpus_on_node":  "8",
+    "cpus_per_task":  "8",
+    "gpus_on_node":  "1",
+    "gtids":  "0",
+    "immediate":  "120",
+    "job_account":  "uh",
+    "job_cpus_per_node":  "8",
+    "job_end_time":  "1773036774",
+    "job_gid":  "7489",
+    "job_gpus":  "5",
+    "job_id":  "11443231",
+    "job_name":  "water_stage",
+    "job_nodelist":  "gn-16-14-00",
+    "job_num_nodes":  "1",
+    "job_partition":  "gpu",
+    "job_qos":  "normal",
+    "job_start_time":  "1772863974",
+    "job_uid":  "7489",
+    "job_user":  "jans26",
+    "jobid":  "11443231",
+    "localid":  "0",
+    "mem_per_node":  "32000",
+    "nnodes":  "1",
+    "nodeid":  "0",
+    "nodelist":  "gn-16-14-00",
+    "oom_kill_step":  "0",
+    "prio_process":  "0",
+    "procid":  "0",
+    "submit_dir":  "/mnt/lustre/koa/scratch/jans26/streamflow/KAHAWAI-Project/models/water_stage_classification",
+    "submit_host":  "login-0101",
+    "task_pid":  "213018",
+    "tasks_per_node":  "1",
+    "topology_addr":  "gn-16-14-00",
+    "topology_addr_pattern":  "node",
+    "tres_per_task":  "cpu=8"
+  },
+  "writerId":  "5mdblqkd2csjl4ly6s63q30hxq18tsxm"
+}
